@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Atelier Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#f7f8f6',
+              100: '#eef1ed',
+              200: '#dbe2d6',
+              400: '#a3b19d',
+              600: '#7a8a71',
+              800: '#54634b',
+              900: '#3d4a35',
+            },
+            sand: {
+              100: '#fcfaf7',
+              200: '#f5f1e9',
+              400: '#e3dacd',
+              600: '#cbbdae',
+            },
+            olive: '#4b5320',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .grain {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    .glass-light {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .input-underline {
+      border-bottom: 1px solid rgba(61, 74, 53, 0.2);
+      transition: border-color 0.3s ease, padding-bottom 0.3s ease;
+    }
+    .input-underline:focus {
+      border-bottom: 1px solid rgba(61, 74, 53, 1);
+      outline: none;
+    }
+  </style>
+</head>
+<body class="bg-sand-100 font-body text-sage-900 antialiased overflow-x-hidden">
+  <div class="grain"></div>
+
+  <!-- Sophisticated Navbar -->
+  <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-4xl glass-light rounded-full px-8 py-4 flex items-center justify-between shadow-sm">
+    <a href="unique-hero.html" class="font-heading italic font-bold text-2xl tracking-tight text-sage-900 hover:text-olive transition-colors">
+      Atelier<span class="text-olive">.</span>
+    </a>
+      <div class="flex md:hidden items-center gap-6 text-[10px] font-medium text-sage-600 uppercase tracking-widest">
+        <a href="unique-hero.html" class="hover:text-olive transition-colors">Home</a>
+        <a href="work-portfolio.html" class="hover:text-olive transition-colors">Archive</a>
+        <a href="studio-philosophy.html" class="hover:text-olive transition-colors">Studio</a>
+        <a href="contact.html" class="text-olive">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium text-sage-600 uppercase tracking-widest">
+      <a href="unique-hero.html" class="hover:text-olive transition-colors">Home</a>
+      <a href="work-portfolio.html" class="hover:text-olive transition-colors">Archive</a>
+      <a href="studio-philosophy.html" class="hover:text-olive transition-colors">Studio</a>
+      <a href="contact.html" class="text-olive transition-colors">Contact</a>
+    </div>
+    <a href="contact.html" class="bg-sage-900 text-sand-100 text-xs font-bold px-6 py-3 rounded-full hover:bg-olive transition-all duration-300 hover:scale-105 shadow-lg active:scale-95">
+      Inquire
+    </a>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <header class="relative pt-48 pb-20 px-6 text-center">
+    <!-- Atmospheric Background Glows -->
+    <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-sage-200 rounded-full blur-[120px] -z-10 opacity-50"></div>
+    <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-sand-400 rounded-full blur-[120px] -z-10 opacity-30"></div>
+
+    <div class="max-w-3xl mx-auto">
+      <h1 class="font-heading text-5xl md:text-7xl font-bold text-sage-900 mb-6 tracking-tight">
+        Let's <span class="italic font-normal text-sage-600">collaborate</span>
+      </h1>
+      <p class="text-lg md:text-xl text-sage-800/70 leading-relaxed font-light max-w-xl mx-auto">
+        I am currently accepting new commissions for Winter 2026. Whether it's a brand evolution or a digital masterpiece, let's define your vision together.
+      </p>
+    </div>
+  </header>
+
+  <!-- Inquiry Form Section -->
+  <main class="max-w-2xl mx-auto px-6 pb-32">
+    <div class="bg-white/40 backdrop-blur-sm rounded-[3rem] p-8 md:p-16 border border-white/60 shadow-2xl shadow-sage-900/5">
+      <form class="space-y-12">
+
+        <!-- Name Field -->
+        <div class="group">
+          <label class="block text-[10px] uppercase tracking-[0.2em] text-sage-600 mb-3 font-medium">Full Name</label>
+          <input type="text"
+                 class="w-full bg-transparent py-3 text-lg font-light text-sage-900 input-underline placeholder-sage-300"
+                 placeholder="Enter your name...">
+        </div>
+
+        <!-- Email Field -->
+        <div class="group">
+          <label class="block text-[10px] uppercase tracking-[0.2em] text-sage-600 mb-3 font-medium">Email Address</label>
+          <input type="email"
+                 class="w-full bg-transparent py-3 text-lg font-light text-sage-900 input-underline placeholder-sage-300"
+                 placeholder="email@example.com">
+        </div>
+
+        <!-- Project Type Field -->
+        <div class="group">
+          <label class="block text-[10px] uppercase tracking-[0.2em] text-sage-600 mb-3 font-medium">Project Type</label>
+          <select class="w-full bg-transparent py-3 text-lg font-light text-sage-900 input-underline focus:outline-none cursor-pointer appearance-none">
+            <option value="branding">Brand Identity</option>
+            <option value="web">Digital Experience</option>
+            <option value="art">Art Direction</option>
+            <option value="other">Other Inquiry</option>
+          </select>
+        </div>
+
+        <!-- Message Field -->
+        <div class="group">
+          <label class="block text-[10px] uppercase tracking-[0.2em] text-sage-600 mb-3 font-medium">Project Details</label>
+          <textarea rows="4"
+                    class="w-full bg-transparent py-3 text-lg font-light text-sage-900 input-underline placeholder-sage-300 resize-none"
+                    placeholder="Tell me about your vision..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-6">
+          <button type="submit"
+                  class="w-full bg-sage-900 text-sand-100 font-semibold py-5 rounded-full hover:bg-olive transition-all duration-500 hover:scale-[1.02] shadow-xl shadow-sage-900/20 uppercase tracking-widest text-xs">
+            Send Inquiry
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Direct Contact & Footer -->
+  <footer class="py-24 px-6 border-t border-sage-200 bg-white/20">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="flex flex-wrap justify-center gap-12 mb-16 text-sm font-medium text-sage-600 uppercase tracking-widest">
+        <a href="mailto:hello@atelier.studio" class="hover:text-olive transition-colors flex items-center gap-2">
+          <span>Email</span>
+          <span class="w-1 h-1 rounded-full bg-sage-300"></span>
+        </a>
+        <a href="#" class="hover:text-olive transition-colors flex items-center gap-2">
+          <span>Instagram</span>
+          <span class="w-1 h-1 rounded-full bg-sage-300"></span>
+        </a>
+        <a href="#" class="hover:text-olive transition-colors flex items-center gap-2">
+          <span>LinkedIn</span>
+          <span class="w-1 h-1 rounded-full bg-sage-300"></span>
+        </a>
+        <a href="#" class="hover:text-olive transition-colors flex items-center gap-2">
+          <span>Behance</span>
+          <span class="w-1 h-1 rounded-full bg-sage-300"></span>
+        </a>
+      </div>
+
+      <div class="font-heading italic font-bold text-2xl text-sage-900 mb-4">
+        Atelier<span class="text-olive">.</span>
+      </div>
+      <p class="text-sage-500 text-xs uppercase tracking-tighter opacity-60">
+        © 2024 Studio Archive. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

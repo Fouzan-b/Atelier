@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Brand | Organic Sophistication</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#f7f8f6',
+              100: '#eef1ed',
+              200: '#dbe2d6',
+              400: '#a3b19d',
+              600: '#7a8a71',
+              800: '#54634b',
+              900: '#3d4a35',
+            },
+            sand: {
+              100: '#fcfaf7',
+              200: '#f5f1e9',
+              400: '#e3dacd',
+              600: '#cbbdae',
+            },
+            olive: '#4b5320',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .animate-float {
+      animation: float 5s ease-in-out infinite;
+    }
+    .grain {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    .glass-light {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .text-fluid {
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+    }
+  </style>
+</head>
+<body class="bg-sand-100 font-body text-sage-900 antialiased overflow-x-hidden">
+  <div class="grain"></div>
+
+  <!-- Sophisticated Navbar -->
+  <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-4xl glass-light rounded-full px-8 py-4 flex items-center justify-between shadow-sm">
+    <a href="unique-hero.html" class="font-heading italic font-bold text-2xl tracking-tight text-sage-900 hover:text-olive transition-colors">
+      Atelier<span class="text-olive">.</span>
+    </a>
+      <div class="flex md:hidden items-center gap-6 text-[10px] font-medium text-sage-600 uppercase tracking-widest">
+        <a href="unique-hero.html" class="text-olive">Home</a>
+        <a href="work-portfolio.html" class="hover:text-olive transition-colors">Archive</a>
+        <a href="studio-philosophy.html" class="hover:text-olive transition-colors">Studio</a>
+        <a href="contact.html" class="hover:text-olive transition-colors">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium text-sage-600 uppercase tracking-widest">
+        <a href="unique-hero.html" class="text-olive transition-colors">Home</a>
+        <a href="work-portfolio.html" class="hover:text-olive transition-colors">Archive</a>
+        <a href="studio-philosophy.html" class="hover:text-olive transition-colors">Studio</a>
+        <a href="contact.html" class="hover:text-olive transition-colors">Contact</a>
+      </div>
+    <a href="contact.html" class="bg-sage-900 text-sand-100 text-xs font-bold px-6 py-3 rounded-full hover:bg-olive transition-all duration-300 hover:scale-105 shadow-lg active:scale-95">
+      Inquire
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="relative min-h-screen flex items-center px-6 py-20">
+    <!-- Organic Background Shapes -->
+    <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-sage-200 rounded-full blur-[100px] -z-10 opacity-60"></div>
+    <div class="absolute bottom-1/4 -right-20 w-[600px] h-[600px] bg-sand-400 rounded-full blur-[120px] -z-10 opacity-40"></div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+      <!-- Left Column: The Statement (7 cols) -->
+      <div class="lg:col-span-7 z-10">
+        <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-sage-200/50 text-sage-800 text-xs font-medium mb-8 tracking-widest uppercase border border-sage-300">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-olive opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-olive"></span>
+          </span>
+          Est. 2024 — Open for Commissions
+        </div>
+
+        <h1 class="font-heading text-fluid font-bold text-sage-900 leading-[1.1] tracking-tight mb-8">
+          Curating <br>
+          <span class="italic font-normal text-sage-600">Timeless</span> Digital <br>
+          Experiences
+        </h1>
+
+        <p class="text-lg md:text-xl text-sage-800/70 leading-relaxed mb-12 max-w-xl font-light">
+          An architectural approach to design. I craft <span class="text-sage-900 font-medium">bespoke interfaces</span> that balance organic warmth with <span class="text-sage-900 font-medium">functional rigor</span>, ensuring every pixel serves a purpose.
+        </p>
+
+        <div class="flex flex-wrap gap-8">
+        <a href="work-portfolio.html" class="bg-sage-900 text-sand-100 font-semibold px-10 py-5 rounded-full hover:bg-olive transition-all duration-300 hover:scale-105 shadow-xl shadow-sage-900/20">
+          Explore Archive
+        </a>
+        <a href="studio-philosophy.html" class="group flex items-center gap-3 text-sage-900 font-semibold px-8 py-5 rounded-full transition-all duration-300 hover:bg-sage-200/50">
+          The Philosophy
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+        </div>
+      </div>
+
+      <!-- Right Column: The Visual (5 cols) -->
+      <div class="lg:col-span-5 relative">
+        <!-- Organic Image Frame -->
+        <div class="relative z-20 aspect-[4/5] rounded-t-full rounded-b-3xl glass-light p-3 shadow-2xl overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-tr from-sage-200/20 to-transparent opacity-40"></div>
+
+          <!-- Profile Image -->
+          <div class="relative h-full w-full rounded-t-full rounded-b-2xl overflow-hidden bg-sage-100 border border-white/40">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+                 alt="Profile"
+                 class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+
+            <!-- Soft Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-sand-100/40"></div>
+          </div>
+        </div>
+
+        <!-- Sophisticated Floating Tokens -->
+        <div class="absolute -top-4 -right-4 z-30 animate-float">
+          <div class="glass-light px-5 py-2.5 rounded-full flex items-center gap-3 shadow-sm">
+            <div class="w-1.5 h-1.5 rounded-full bg-olive"></div>
+            <span class="text-[10px] font-bold text-sage-900 uppercase tracking-widest">Branding</span>
+          </div>
+        </div>
+
+        <div class="absolute top-1/4 -left-8 z-30 animate-float" style="animation-delay: -1.5s">
+          <div class="glass-light px-5 py-2.5 rounded-full flex items-center gap-3 shadow-sm">
+            <div class="w-1.5 h-1.5 rounded-full bg-sage-600"></div>
+            <span class="text-[10px] font-bold text-sage-900 uppercase tracking-widest">UI Architecture</span>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-6 right-12 z-30 animate-float" style="animation-delay: -3s">
+          <div class="glass-light px-5 py-2.5 rounded-full flex items-center gap-3 shadow-sm">
+            <div class="w-1.5 h-1.5 rounded-full bg-sand-600"></div>
+            <span class="text-[10px] font-bold text-sage-900 uppercase tracking-widest">Art Direction</span>
+          </div>
+        </div>
+
+        <!-- Architectural Hint -->
+        <div class="absolute -bottom-12 -left-12 w-56 h-72 bg-white rounded-2xl shadow-2xl z-10 rotate-3 opacity-60 group-hover:opacity-100 transition-opacity duration-500 border border-sage-200">
+          <div class="p-6 h-full flex flex-col gap-6">
+            <div class="w-12 h-12 rounded-full bg-sage-100"></div>
+            <div class="space-y-2">
+              <div class="w-full h-2 bg-sage-100 rounded-full"></div>
+              <div class="w-5/6 h-2 bg-sage-100 rounded-full"></div>
+              <div class="w-4/6 h-2 bg-sage-100 rounded-full"></div>
+            </div>
+            <div class="mt-auto w-full h-24 bg-sage-50 rounded-xl border border-sage-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

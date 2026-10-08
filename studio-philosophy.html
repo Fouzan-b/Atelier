@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio | Atelier Philosophy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#f7f8f6',
+              100: '#eef1ed',
+              200: '#dbe2d6',
+              400: '#a3b19d',
+              600: '#7a8a71',
+              800: '#54634b',
+              900: '#3d4a35',
+            },
+            sand: {
+              100: '#fcfaf7',
+              200: '#f5f1e9',
+              400: '#e3dacd',
+              600: '#cbbdae',
+            },
+            olive: '#4b5320',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .grain {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    .glass-light {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-sand-100 font-body text-sage-900 antialiased overflow-x-hidden">
+  <div class="grain"></div>
+
+  <!-- Sophisticated Navbar -->
+  <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-4xl glass-light rounded-full px-8 py-4 flex items-center justify-between shadow-sm">
+    <a href="unique-hero.html" class="font-heading italic font-bold text-2xl tracking-tight text-sage-900 hover:text-olive transition-colors">
+      Atelier<span class="text-olive">.</span>
+    </a>
+      <div class="flex md:hidden items-center gap-6 text-[10px] font-medium text-sage-600 uppercase tracking-widest">
+        <a href="unique-hero.html" class="hover:text-olive transition-colors">Home</a>
+        <a href="work-portfolio.html" class="hover:text-olive transition-colors">Archive</a>
+        <a href="studio-philosophy.html" class="text-olive">Studio</a>
+        <a href="contact.html" class="hover:text-olive transition-colors">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-10 text-sm font-medium text-sage-600 uppercase tracking-widest">
+      <a href="unique-hero.html" class="hover:text-olive transition-colors">Home</a>
+      <a href="work-portfolio.html" class="hover:text-olive transition-colors">Archive</a>
+      <a href="studio-philosophy.html" class="text-olive transition-colors">Studio</a>
+      <a href="#" class="hover:text-olive transition-colors">Contact</a>
+    </div>
+    <a href="contact.html" class="bg-sage-900 text-sand-100 text-xs font-bold px-6 py-3 rounded-full hover:bg-olive transition-all duration-300 hover:scale-105 shadow-lg active:scale-95">
+      Inquire
+    </a>
+  </nav>
+
+  <!-- Section 1: The Manifesto -->
+  <section class="relative min-h-screen flex items-center justify-center px-6 py-32">
+    <!-- Subtle background glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sage-200 rounded-full blur-[120px] -z-10 opacity-40"></div>
+
+    <div class="max-w-2xl text-center fade-in">
+      <h1 class="font-heading italic text-5xl md:text-7xl text-sage-900 leading-tight mb-12">
+        Design is the <span class="font-bold not-italic">silent ambassador</span> of your brand.
+      </h1>
+      <p class="text-lg md:text-xl text-sage-800/70 leading-relaxed font-light">
+        At Atelier, we don't just build interfaces; we curate digital atmospheres. We believe that luxury is found in the subtraction of the unnecessary, leaving only what is essential, purposeful, and timeless.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2: The Pillars -->
+  <section class="py-32 px-6 bg-white/30">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24">
+
+        <!-- Pillar 1 -->
+        <div class="relative pl-8 border-l border-sage-200 pt-4">
+          <span class="absolute -left-4 top-0 font-heading text-sm text-sage-400 italic">01</span>
+          <h3 class="font-heading text-2xl font-bold text-sage-900 mb-4">Intentionality</h3>
+          <p class="text-sage-600 leading-loose font-light">
+            Every line, every pixel, and every millisecond of motion is considered. We reject the noise of trends in favor of a rigorous, intent-driven logic.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="relative pl-8 border-l border-sage-200 pt-4 md:mt-12">
+          <span class="absolute -left-4 top-0 font-heading text-sm text-sage-400 italic">02</span>
+          <h3 class="font-heading text-2xl font-bold text-sage-900 mb-4">Organic Warmth</h3>
+          <p class="text-sage-600 leading-loose font-light">
+            Digital should not feel cold. By integrating soft textures, balanced asymmetry, and a human-centric palette, we create spaces that welcome the user.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="relative pl-8 border-l border-sage-200 pt-4 md:mt-24">
+          <span class="absolute -left-4 top-0 font-heading text-sm text-sage-400 italic">03</span>
+          <h3 class="font-heading text-2xl font-bold text-sage-900 mb-4">Timelessness</h3>
+          <p class="text-sage-600 leading-loose font-light">
+            We build for the decade, not the quarter. Our approach balances modern capability with classic proportions to ensure your brand remains relevant.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The Process (Visual Narrative) -->
+  <section class="py-32 px-6">
+    <div class="max-w-7xl mx-auto space-y-32">
+
+      <!-- Step 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl group">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=800"
+               alt="Process 1"
+               class="w-full aspect-[4/5] object-cover transition-transform duration-1000 group-hover:scale-105">
+        </div>
+        <div class="w-full md:w-1/2 pl-0 md:pl-12">
+          <h4 class="font-heading text-3xl font-bold text-sage-900 mb-6">The Discovery Phase</h4>
+          <p class="text-sage-800/70 text-lg leading-relaxed font-light mb-6">
+            We begin with an excavation of the brand's core. Through deep interviews and visual research, we uncover the "soul" of the project—the invisible threads that connect a business to its users.
+          </p>
+          <div class="w-12 h-px bg-olive"></div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+        <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl group">
+          <img src="https://images.unsplash.com/photo-1513519245088-0e17d7ed782d?auto=format&fit=crop&q=80&w=800"
+               alt="Process 2"
+               class="w-full aspect-square object-cover transition-transform duration-1000 group-hover:scale-105">
+        </div>
+        <div class="w-full md:w-1/2 pr-0 md:pr-12 text-right">
+          <h4 class="font-heading text-3xl font-bold text-sage-900 mb-6">Architectural Mapping</h4>
+          <p class="text-sage-800/70 text-lg leading-relaxed font-light mb-6">
+            Structure precedes style. We map the user journey as an architectural blueprint, ensuring the flow is intuitive and the hierarchy is absolute before a single color is chosen.
+          </p>
+          <div class="w-12 h-px bg-olive ml-auto"></div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl group">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e597d60596?auto=format&fit=crop&q=80&w=800"
+               alt="Process 3"
+               class="w-full aspect-[3/2] object-cover transition-transform duration-1000 group-hover:scale-105">
+        </div>
+        <div class="w-full md:w-1/2 pl-0 md:pl-12">
+          <h4 class="font-heading text-3xl font-bold text-sage-900 mb-6">The Final Refinement</h4>
+          <p class="text-sage-800/70 text-lg leading-relaxed font-light mb-6">
+            The final phase is a process of subtraction. We polish the interactions and refine the typography until the design feels effortless—where every element is exactly where it needs to be.
+          </p>
+          <div class="w-12 h-px bg-olive"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: The Studio -->
+  <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <!-- Full-screen atmospheric image -->
+    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1600"
+         alt="The Studio"
+         class="absolute inset-0 w-full h-full object-cover brightness-50">
+
+    <!-- Floating Glass Card -->
+    <div class="relative z-10 max-w-xl mx-auto px-6">
+      <div class="glass-light p-12 rounded-3xl text-center shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+        <h3 class="font-heading text-3xl font-bold text-sage-900 mb-6">Our Space, Your Vision.</h3>
+        <p class="text-sage-800 text-lg leading-relaxed font-light mb-8">
+          Atelier is a collective of thinkers and makers. We work from a place of curiosity and a commitment to excellence. Whether you are starting from a blank page or refining a legacy, we are here to help you build something timeless.
+        </p>
+        <a href="unique-hero.html" class="inline-block bg-sage-900 text-sand-100 text-xs font-bold px-8 py-4 rounded-full hover:bg-olive transition-all duration-300">
+          Return to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-20 px-6 border-t border-sage-200 bg-white/30">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <div class="text-center md:text-left">
+        <div class="font-heading italic font-bold text-2xl text-sage-900">
+          Atelier<span class="text-olive">.</span>
+        </div>
+        <p class="text-sage-600 text-sm mt-2">© 2024 Studio Archive. All rights reserved.</p>
+      </div>
+      <div class="flex gap-6 text-xs font-bold uppercase tracking-widest text-sage-600">
+        <a href="#" class="hover:text-olive transition-colors">Instagram</a>
+        <a href="#" class="hover:text-olive transition-colors">Behance</a>
+        <a href="#" class="hover:text-olive transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
